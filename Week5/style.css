@@ -1,54 +1,82 @@
-/* style.css */
-body {
-    background-color: lightgreen;
-    font-family: Arial, sans-serif;
+/* Task 5.4: Colours and spacing in :root variables */
+:root {
+    --primary-color: #0f172a;
+    --accent-color: #f97316;
+    --bg-color: #f8fafc;
+    --card-bg: #ffffff;
+    --text-color: #334155;
+    --spacing-main: 24px;
 }
-h1 {
-    color: darkblue;
-    text-align: center;
-}
-/* 1. * (All / Universal selector) */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* 2. h1 (Element selector) */
-h1 {
-    color: darkblue;
-}
-
-/* 3. #hero (ID selector) */
-#hero {
-    background-color: lightyellow;
-    padding: 20px;
-    text-align: center;
-}
-
-/* 4. .card (Class selector) */
-.card {
-    background-color: white;
-    border: 1px solid #ccc;
-    padding: 15px;
-    margin: 20px;
-}
-/* Body par font aur line-height set kiya */
 body {
     font-family: 'Poppins', sans-serif; /* Google Font */
-    font-size: 16px;                   /* Font Size */
-    line-height: 1.6;                  /* Line Height */
-    color: #333333;                    /* Text Color */
-    background-color: #f4f7f6;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: 16px;
+    line-height: 1.7;
+    padding: var(--spacing-main);
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-/* Headings aur paragraphs ki styling */
 h1 {
+    color: var(--primary-color);
     font-size: 2.5rem;
-    color: #1e3d59;
+    margin-bottom: 8px;
 }
 
-p {
-    font-size: 1rem;
-    color: #555555;
+h2 {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 4px;
+    display: inline-block;
+}
+
+#hero {
+    background-color: var(--card-bg);
+    padding: 40px;
+    text-align: center;
+    border-radius: 12px;
+    margin-bottom: var(--spacing-main);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    border-top: 5px solid var(--accent-color);
+}
+
+#hero p {
+    color: #64748b;
+    font-size: 1.1rem;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: var(--spacing-main);
+    border-radius: 12px;
+    margin-bottom: var(--spacing-main);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e2e8f0;
+}
+
+.card ul {
+    list-style-type: square;
+    padding-left: 20px;
+    margin-top: 8px;
+}
+
+.card p {
+    margin-bottom: 8px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #94a3b8;
+    font-size: 0.9rem;
 }
