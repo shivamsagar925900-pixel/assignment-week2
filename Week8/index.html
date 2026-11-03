@@ -1,56 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSS Grid & Flexbox Layout</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- FontAwesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 8 - CSS Grid Dashboard</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Task 8.3: Grid Container with Named Areas -->
-  <div class="grid-container">
-    
-    <header class="box area-head">
-      <i class="fa-solid fa-heading"></i>
-      <span>Header Area</span>
-    </header>
+    <div class="dashboard">
 
-    <aside class="box area-side">
-      <i class="fa-solid fa-bars"></i>
-      <span>Sidebar Area</span>
-    </aside>
+        <!-- Task 8.1: Header Area -->
+        <header class="header">
+            <h2>My Dashboard</h2>
+            <div class="profile">
+                <span>Welcome, Student</span>
+                <span class="avatar">S</span>
+            </div>
+        </header>
+          <!-- Task 8.2: Sidebar Area -->
+        <aside class="sidebar">
+            <h3>Menu</h3>
+            <nav>
+                <a href="#" class="active">🏠 Dashboard</a>
+                <a href="#">📊 Analytics</a>
+                <a href="#">📁 Projects</a>
+                <a href="#">👥 Users</a>
+                <a href="#">⚙️ Settings</a>
+            </nav>
+        </aside>
+         <!-- Task 8.3: Main Area -->
+        <main class="main">
+            <h1>Dashboard Overview</h1>
+            <p class="subtitle">
+                Welcome to your responsive CSS Grid dashboard.
+            </p>
 
-    <main class="main-content">
-      <!-- Task 8.2: Responsive Auto-Fit Grid inside Main -->
-      <div class="auto-grid">
-        <div class="box">
-          <i class="fa-solid fa-house"></i>
-          <span>Home</span>
-        </div>
-        <div class="box">
-          <i class="fa-solid fa-user"></i>
-          <span>Profile</span>
-        </div>
-        <div class="box">
-          <i class="fa-solid fa-gear"></i>
-          <span>Settings</span>
-        </div>
-        <div class="box">
-          <i class="fa-solid fa-envelope"></i>
-          <span>Messages</span>
-        </div>
-      </div>
-    </main>
+            
+            <section class="cards">
+                  <!-- Task 8.4: Flexbox Inside Each Card -->
+                <div class="card">
+                    <div class="card-content">
+                        <span class="icon">👥</span>
+                        <div>
+                            <h3>Total Users</h3>
+                            <p class="number">1,250</p>
+                        </div>
+                    </div>
+                    <p class="description">Registered users</p>
+                </div>
 
-    <footer class="box area-foot">
-      <i class="fa-solid fa-copyright"></i>
-      <span>Footer Area</span>
-    </footer>
+                <div class="card">
+                    <div class="card-content">
+                        <span class="icon">📦</span>
+                        <div>
+                            <h3>Total Products</h3>
+                            <p class="number">320</p>
+                        </div>
+                    </div>
+                    <p class="description">Products available</p>
+                </div>
 
-  </div>
+                <div class="card">
+                    <div class="card-content">
+                        <span class="icon">💰</span>
+                        <div>
+                            <h3>Total Revenue</h3>
+                            <p class="number">₹45,000</p>
+                        </div>
+                    </div>
+                    <p class="description">Monthly revenue</p>
+                </div>
 
+                <div class="card">
+                    <div class="card-content">
+                        <span class="icon">🛒</span>
+                        <div>
+                            <h3>Total Orders</h3>
+                            <p class="number">850</p>
+                        </div>
+                    </div>
+                    <p class="description">Orders received</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <span class="icon">📈</span>
+                        <div>
+                            <h3>Growth</h3>
+                            <p class="number">18%</p>
+                        </div>
+                    </div>
+                    <p class="description">Monthly growth</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <span class="icon">⭐</span>
+                        <div>
+                            <h3>Rating</h3>
+                            <p class="number">4.8/5</p>
+                        </div>
+                    </div>
+                    <p class="description">Customer rating</p>
+                </div>
+
+            </section>
+        </main>
+         <!-- Task 8.5: Footer Area -->
+        <footer class="footer">
+            <p>&copy; 2026 My Dashboard. All rights reserved.</p>
+        </footer>
+
+    </div>
 </body>
 </html>
