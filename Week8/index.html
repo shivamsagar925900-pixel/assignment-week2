@@ -1,117 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 8 - CSS Grid Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+    <title>My Portfolio</title>
 </head>
 <body>
+<header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about">About</a>
+        <a href="https://github.com/aadeshkumar1502-star" target="_blank">
+            Github 
+        </a>
+    </nav>
+</header>
 
-    <div class="dashboard">
+    <h1>My Portfolio</h1>
 
-        <!-- Task 8.1: Header Area -->
-        <header class="header">
-            <h2>My Dashboard</h2>
-            <div class="profile">
-                <span>Welcome, Student</span>
-                <span class="avatar">S</span>
-            </div>
-        </header>
-          <!-- Task 8.2: Sidebar Area -->
-        <aside class="sidebar">
-            <h3>Menu</h3>
-            <nav>
-                <a href="#" class="active">🏠 Dashboard</a>
-                <a href="#">📊 Analytics</a>
-                <a href="#">📁 Projects</a>
-                <a href="#">👥 Users</a>
-                <a href="#">⚙️ Settings</a>
-            </nav>
+    <img src="C:\Users\hp\Downloads\myphoto.jpeg"
+         alt="My profile picture"
+         width="200">
+
+
+
+    <h1>My Courses</h1>
+
+    <ul>
+        <li>Programming
+            <ul>
+                <li>Java</li>
+            </ul>
+        </li>
+
+        <li>Web Development
+            <ol>
+                <li>HTML</li>
+                <li>CSS</li>
+            </ol>
+        </li>
+    </ul>
+
+
+    
+
+    <main>
+        <section>
+            <h2>About Me</h2>
+            <p>I am a B.Tech CSE student.</p>
+        </section>
+
+        <article>
+            <h2>My Skills</h2>
+            <p>I am learning HTML, Java and JavaScript.</p>
+        </article>
+
+        <aside>
+            <h3>My Interest</h3>
+            <p>Coding and web development.</p>
         </aside>
-         <!-- Task 8.3: Main Area -->
-        <main class="main">
-            <h1>Dashboard Overview</h1>
-            <p class="subtitle">
-                Welcome to your responsive CSS Grid dashboard.
+    
+
+    
+
+
+        <article>
+            <h2>My First Blog Post</h2>
+            <p>
+                Today I learned about HTML links, images,
+                lists and semantic tags. These elements help
+                me create a well-structured portfolio website.
             </p>
+        </article>
 
-            
-            <section class="cards">
-                  <!-- Task 8.4: Flexbox Inside Each Card -->
-                <div class="card">
-                    <div class="card-content">
-                        <span class="icon">👥</span>
-                        <div>
-                            <h3>Total Users</h3>
-                            <p class="number">1,250</p>
-                        </div>
-                    </div>
-                    <p class="description">Registered users</p>
-                </div>
+        <aside>
+            <h3>My Goal</h3>
+            <p>My goal is to become a skilled software developer.</p>
+        </aside>
+        
+    </main>
 
-                <div class="card">
-                    <div class="card-content">
-                        <span class="icon">📦</span>
-                        <div>
-                            <h3>Total Products</h3>
-                            <p class="number">320</p>
-                        </div>
-                    </div>
-                    <p class="description">Products available</p>
-                </div>
+    <footer>
+        <p>Copyright 2026 My Portfolio</p>
+        <p>Contact: <a href="mailto:shivamsagar925900@gmail.com">shivamsagar925900@gmail.com</a></p>
+    </footer>
 
-                <div class="card">
-                    <div class="card-content">
-                        <span class="icon">💰</span>
-                        <div>
-                            <h3>Total Revenue</h3>
-                            <p class="number">₹45,000</p>
-                        </div>
-                    </div>
-                    <p class="description">Monthly revenue</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-content">
-                        <span class="icon">🛒</span>
-                        <div>
-                            <h3>Total Orders</h3>
-                            <p class="number">850</p>
-                        </div>
-                    </div>
-                    <p class="description">Orders received</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-content">
-                        <span class="icon">📈</span>
-                        <div>
-                            <h3>Growth</h3>
-                            <p class="number">18%</p>
-                        </div>
-                    </div>
-                    <p class="description">Monthly growth</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-content">
-                        <span class="icon">⭐</span>
-                        <div>
-                            <h3>Rating</h3>
-                            <p class="number">4.8/5</p>
-                        </div>
-                    </div>
-                    <p class="description">Customer rating</p>
-                </div>
-
-            </section>
-        </main>
-         <!-- Task 8.5: Footer Area -->
-        <footer class="footer">
-            <p>&copy; 2026 My Dashboard. All rights reserved.</p>
-        </footer>
-
-    </div>
 </body>
 </html>
