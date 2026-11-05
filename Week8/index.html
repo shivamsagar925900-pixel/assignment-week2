@@ -3,45 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Aadesh kumar Portfolio - week 5</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    
+    <title>Week 6 - Profile Card</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <header id="hero">
-        <h1>Hi, I am Aadesh kumar</h1>
-        <p>B.Tech Computer Science Student | Web Developer</p>
+       <!-- Task 6.4: Sticky top navigation bar -->
+    <header class="top-bar">
+        <h2>My Profile</h2>
+        <span class="top-label">Week 6 Assignment</span>
     </header>
-
-    <main>
-        <section class="card">
-            <h2>About Me</h2>
-            <p>I am a CSE student and currently learning HTML, CSS, and JavaScript to improve my portfolio.</p>
+   <main class="profile-container">
+  <!-- Task 6.1: Box model demonstration -->
+        <section class="box-model-demo">
+            <h2>Task 6.1: CSS Box Model</h2>
+            <div class="box-model-example">
+                <span>Content</span>
+                <small>Padding + Border + Margin</small>
+            </div>
+            <p>box-sizing: border-box;</p>
         </section>
+         <!-- Task 6.2: First profile card -->
+        <article class="profile-card card-blue">
+            <div class="profile-header">
+                <img
+                    src="profile.jpg"
+                    alt="Profile photo"
+                    class="avatar"
+                >
+                <h2>Aadesh Kumar</h2>
+                <p class="role">Web Development Student</p>
+            </div>
+             <!-- Task 6.3: Scrollable biography -->
+            <div class="bio-box">
+                <h3>About Me</h3>
+                <p>
+                    Hello! My name is Aadesh Kumar. I am a student
+                    learning HTML, CSS and JavaScript.
+                </p>
+                <p>
+                    I enjoy creating websites and learning new
+                    programming concepts. My goal is to become
+                    a skilled full-stack developer.
+                </p>
+                <p>
+                    I practise coding daily and work on small
+                    projects to improve my problem-solving skills.
+                </p>
+                <p>
+                    My hobbies include reading, learning technology,
+                    listening to music and exploring new ideas.
+                </p>
+                <p>
+                    I believe consistency and practice are the keys
+                    to becoming a good programmer.
+                </p>
+            </div>
 
-        <section class="card">
-            <h2>My Skills & Courses</h2>
-            <ul>
-                <li>Java Programming & DSA</li>
-                <li>HTML5 & CSS3 Styling</li>
-                <li>Git & GitHub Basics</li>
-            </ul>
-        </section>
-
-        <article class="card">
-            <h2>Color Choice Reflection</h2>
-            <p>1. I chose a modern dark slate blue colour to give the page a professional and tech-focused look.</p>
-<p>2. I used a light background colour to make the content easy to read and reduce eye strain.</p>
-<p>3. I used orange accents to highlight important headings and make different sections stand out.</p>
+            <div class="profile-footer">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+            </div>
         </article>
-    </main>
+               <!-- Task 6.2: Second colour version -->
+        <article class="profile-card card-purple">
+            <div class="profile-header">
+                <img
+                    src="profile.jpg"
+                    alt="Profile photo"
+                    class="avatar"
+                >
+                <h2>Aadesh Kumar</h2>
+                <p class="role">Creative Web Designer</p>
+            </div>
+             <div class="bio-box">
+                <h3>About Me</h3>
+                <p>
+                    Hi! I am Aadesh Kumar, a creative student
+                    interested in web design and user interfaces.
+                </p>
+                <p>
+                    I like designing clean, responsive and
+                    attractive websites using HTML and CSS.
+                </p>
+                <p>
+                    I am learning layout techniques, the CSS
+                    box model, positioning and responsive design.
+                </p>
+                <p>
+                    My aim is to create user-friendly websites
+                    and develop my frontend development skills.
+                </p>
+            </div>
 
-    <footer>
-        <p>&copy; 2026 Aadesh kumar. All rights reserved.</p>
+            <div class="profile-footer">
+                <span>Design</span>
+                <span>HTML</span>
+                <span>CSS</span>
+            </div>
+        </article>
+   </main>
+     <!-- Task 6.5: Fixed floating action button -->
+    <button class="floating-button"
+            type="button"
+            aria-label="Add profile">
+        +
+    </button>
+
+    <footer class="page-footer">
+        <p>Week 6 | Practical Lab 2 | Profile Card</p>
     </footer>
-
 </body>
 </html>

@@ -1,82 +1,237 @@
-
-:root {
-    --primary-color: #0f172a;
-    --accent-color: #f97316;
-    --bg-color: #f8fafc;
-    --card-bg: #ffffff;
-    --text-color: #334155;
-    --spacing-main: 24px;
-}
-
+/* Task 6.1: Apply border-box to every element */
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Poppins', sans-serif; /* Google Font */
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-size: 16px;
-    line-height: 1.7;
-    padding: var(--spacing-main);
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.6;
+}
+/* Task 6.4: Sticky top bar and z-index */
+.top-bar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 25px;
+    background-color: #172554;
+    color: white;
+    box-shadow: 0 3px 10px #00000020;
+}
+
+.top-bar h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.top-label {
+    font-size: 13px;
+}
+
+/* Main page layout */
+.profile-container {
+    width: 100%;
     max-width: 900px;
-    margin: 0 auto;
+    margin: 30px auto;
+    padding: 20px;
+}
+/* Task 6.1: Box model example */
+.box-model-demo {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 2px solid #64748b;
+    border-radius: 12px;
+    background-color: white;
 }
 
-h1 {
-    color: var(--primary-color);
-    font-size: 2.5rem;
-    margin-bottom: 8px;
+.box-model-demo h2 {
+    margin-top: 0;
 }
 
-h2 {
-    color: var(--primary-color);
-    font-size: 1.4rem;
-    margin-bottom: 12px;
-    border-bottom: 2px solid var(--accent-color);
-    padding-bottom: 4px;
-    display: inline-block;
-}
-
-#hero {
-    background-color: var(--card-bg);
-    padding: 40px;
+.box-model-example {
+    width: 260px;
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 25px;
+    border: 8px solid #2563eb;
+    background-color: #dbeafe;
     text-align: center;
-    border-radius: 12px;
-    margin-bottom: var(--spacing-main);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
-    border-top: 5px solid var(--accent-color);
 }
 
-#hero p {
-    color: #64748b;
-    font-size: 1.1rem;
+.box-model-example span {
+    display: block;
+    padding: 10px;
+    background-color: #bfdbfe;
+    font-weight: bold;
 }
-
-.card {
-    background-color: var(--card-bg);
-    padding: var(--spacing-main);
-    border-radius: 12px;
-    margin-bottom: var(--spacing-main);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
-    border: 1px solid #e2e8f0;
-}
-
-.card ul {
-    list-style-type: square;
-    padding-left: 20px;
+.box-model-example small {
+    display: block;
     margin-top: 8px;
 }
-
-.card p {
-    margin-bottom: 8px;
+/* Task 6.2: Common profile card styles */
+.profile-card {
+    width: 100%;
+    max-width: 420px;
+    margin: 25px auto;
+    padding: 25px;
+    border: 2px solid;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 20px #00000012;
 }
 
-footer {
+/* Two different colour versions */
+.card-blue {
+    background-color: #eff6ff;
+    border-color: #2563eb;
+}
+
+.card-purple {
+    background-color: #faf5ff;
+    border-color: #9333ea;
+}
+
+/* Task 6.2: Circular profile photo */
+.profile-header {
+    padding: 10px;
+}
+
+.avatar {
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 15px;
+    border: 4px solid white;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 3px 10px #00000025;
+}
+
+.profile-header h2 {
+    margin: 10px 0 0;
+}
+
+.card-blue .profile-header h2 {
+    color: #1d4ed8;
+}
+
+.card-purple .profile-header h2 {
+    color: #7e22ce;
+}
+
+.role {
+    margin-top: 3px;
+    color: #64748b;
+    font-size: 14px;
+}
+/* Task 6.3: Fixed height and scrolling bio */
+.bio-box {
+    height: 150px;
+    overflow: auto;
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    background-color: white;
+    text-align: left;
+}
+
+.bio-box h3 {
+    margin-top: 0;
+}
+
+.bio-box p {
+    font-size: 14px;
+}
+
+/* Profile skill labels */
+.profile-footer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.profile-footer span {
+    padding: 5px 12px;
+    border-radius: 20px;
+    background-color: #dbeafe;
+    color: #1e40af;
+    font-size: 12px;
+}
+
+.card-purple .profile-footer span {
+    background-color: #f3e8ff;
+    color: #7e22ce;
+}
+/* Task 6.5: Fixed circular + button */
+.floating-button {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 2000;
+
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+
+    background-color: #2563eb;
+    color: white;
+    font-size: 36px;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: 0 4px 12px #00000030;
+}
+
+.floating-button:hover {
+    background-color: #1d4ed8;
+}
+
+/* Footer */
+.page-footer {
+    padding: 20px;
     text-align: center;
-    margin-top: 40px;
-    color: #94a3b8;
-    font-size: 0.9rem;
+    color: #64748b;
+    font-size: 13px;
+}
+
+/* Responsive layout */
+@media (max-width: 480px) {
+    .top-bar {
+        padding: 12px 15px;
+    }
+
+    .top-bar h2 {
+        font-size: 18px;
+    }
+
+    .top-label {
+        font-size: 11px;
+    }
+
+    .profile-container {
+        padding: 12px;
+        margin: 15px auto;
+    }
+
+    .profile-card {
+        padding: 18px;
+    }
+
+    .floating-button {
+        right: 18px;
+        bottom: 18px;
+    }
 }
