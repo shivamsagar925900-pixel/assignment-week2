@@ -1,237 +1,241 @@
-/* Task 6.1: Apply border-box to every element */
+/* General Reset */
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f1f5f9;
     color: #1e293b;
-    line-height: 1.6;
 }
-/* Task 6.4: Sticky top bar and z-index */
-.top-bar {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+
+/* =====================================
+   Task 8.1: CSS Grid, Columns, fr and Gap
+   ===================================== */
+
+.dashboard {
+    min-height: 100vh;
+    display: grid;
+
+    grid-template-columns: 240px 1fr;
+    grid-template-rows: 70px 1fr 60px;
+
+    gap: 15px;
+    padding: 15px;
+}
+/* =====================================
+   Task 8.3: Named Grid Areas
+   head, side, main and foot
+   ===================================== */
+
+.header {
+    grid-area: head;
+    background-color: #2563eb;
+    color: white;
+    padding: 15px 25px;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    padding: 15px 25px;
-    background-color: #172554;
-    color: white;
-    box-shadow: 0 3px 10px #00000020;
 }
 
-.top-bar h2 {
-    margin: 0;
-    font-size: 22px;
-}
-
-.top-label {
-    font-size: 13px;
-}
-
-/* Main page layout */
-.profile-container {
-    width: 100%;
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 20px;
-}
-/* Task 6.1: Box model example */
-.box-model-demo {
-    margin-bottom: 30px;
-    padding: 20px;
-    border: 2px solid #64748b;
-    border-radius: 12px;
+.sidebar {
+    grid-area: side;
     background-color: white;
+    padding: 25px 15px;
+    border-radius: 8px;
 }
 
-.box-model-demo h2 {
-    margin-top: 0;
+.main {
+    grid-area: main;
+    padding: 20px;
+    min-width: 0;
 }
 
-.box-model-example {
-    width: 260px;
-    max-width: 100%;
-    margin: 20px auto;
-    padding: 25px;
-    border: 8px solid #2563eb;
-    background-color: #dbeafe;
+.footer {
+    grid-area: foot;
+    background-color: #1e293b;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    padding: 15px;
 }
 
-.box-model-example span {
-    display: block;
-    padding: 10px;
-    background-color: #bfdbfe;
-    font-weight: bold;
-}
-.box-model-example small {
-    display: block;
-    margin-top: 8px;
-}
-/* Task 6.2: Common profile card styles */
-.profile-card {
-    width: 100%;
-    max-width: 420px;
-    margin: 25px auto;
-    padding: 25px;
-    border: 2px solid;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 8px 20px #00000012;
+/* Connect named areas to the grid */
+.dashboard {
+    grid-template-areas:
+        "head head"
+        "side main"
+        "foot foot";
 }
 
-/* Two different colour versions */
-.card-blue {
-    background-color: #eff6ff;
-    border-color: #2563eb;
-}
-
-.card-purple {
-    background-color: #faf5ff;
-    border-color: #9333ea;
-}
-
-/* Task 6.2: Circular profile photo */
-.profile-header {
-    padding: 10px;
+/* Header Profile */
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .avatar {
-    display: block;
-    width: 120px;
-    height: 120px;
-    margin: 0 auto 15px;
-    border: 4px solid white;
+    background-color: white;
+    color: #2563eb;
+    width: 38px;
+    height: 38px;
     border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 3px 10px #00000025;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
 }
 
-.profile-header h2 {
-    margin: 10px 0 0;
+/* Sidebar Navigation */
+.sidebar h3 {
+    margin-bottom: 20px;
 }
 
-.card-blue .profile-header h2 {
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #334155;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background-color: #dbeafe;
     color: #1d4ed8;
 }
 
-.card-purple .profile-header h2 {
-    color: #7e22ce;
+/* Main Content */
+.main h1 {
+    margin-bottom: 10px;
 }
 
-.role {
-    margin-top: 3px;
+.subtitle {
     color: #64748b;
-    font-size: 14px;
+    margin-bottom: 25px;
 }
-/* Task 6.3: Fixed height and scrolling bio */
-.bio-box {
-    height: 150px;
-    overflow: auto;
-    margin: 20px 0;
-    padding: 15px;
-    border: 1px solid #cbd5e1;
-    border-radius: 10px;
+/* =====================================
+   Task 8.2: Responsive Grid
+   repeat(auto-fit, minmax(150px, 1fr))
+   ===================================== */
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(150px, 1fr));
+
+    gap: 20px;
+}
+/* =====================================
+   Task 8.4: Flexbox Inside Each Card
+   Icon and text side by side
+   ===================================== */
+
+.card {
     background-color: white;
-    text-align: left;
-}
-
-.bio-box h3 {
-    margin-top: 0;
-}
-
-.bio-box p {
-    font-size: 14px;
-}
-
-/* Profile skill labels */
-.profile-footer {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.profile-footer span {
-    padding: 5px 12px;
-    border-radius: 20px;
-    background-color: #dbeafe;
-    color: #1e40af;
-    font-size: 12px;
-}
-
-.card-purple .profile-footer span {
-    background-color: #f3e8ff;
-    color: #7e22ce;
-}
-/* Task 6.5: Fixed circular + button */
-.floating-button {
-    position: fixed;
-    right: 25px;
-    bottom: 25px;
-    z-index: 2000;
-
-    width: 60px;
-    height: 60px;
-    border: none;
-    border-radius: 50%;
-
-    background-color: #2563eb;
-    color: white;
-    font-size: 36px;
-    line-height: 1;
-    cursor: pointer;
-    box-shadow: 0 4px 12px #00000030;
-}
-
-.floating-button:hover {
-    background-color: #1d4ed8;
-}
-
-/* Footer */
-.page-footer {
     padding: 20px;
-    text-align: center;
-    color: #64748b;
-    font-size: 13px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-/* Responsive layout */
-@media (max-width: 480px) {
-    .top-bar {
-        padding: 12px 15px;
+.card-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.icon {
+    font-size: 30px;
+}
+
+.card h3 {
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 8px;
+}
+
+.number {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+.description {
+    font-size: 13px;
+    color: #64748b;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    transition: transform 0.2s ease;
+}
+/* =====================================
+   Task 8.5: Test Grid in DevTools
+   Inspect .dashboard and .cards
+   ===================================== */
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+
+        grid-template-rows: auto auto 1fr auto;
+
+        grid-template-areas:
+            "head"
+            "side"
+            "main"
+            "foot";
     }
 
-    .top-bar h2 {
-        font-size: 18px;
+    .header {
+        gap: 12px;
+        padding: 15px;
+        flex-wrap: wrap;
     }
 
-    .top-label {
-        font-size: 11px;
+    .sidebar {
+        padding: 15px;
     }
 
-    .profile-container {
-        padding: 12px;
-        margin: 15px auto;
+    .sidebar nav {
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
-    .profile-card {
-        padding: 18px;
+    .main {
+        padding: 10px;
     }
 
-    .floating-button {
-        right: 18px;
-        bottom: 18px;
+    .cards {
+        grid-template-columns:
+            repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 400px) {
+    .profile span:first-child {
+        display: none;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
     }
 }

@@ -3,115 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 6 - Profile Card</title>
+    <title>Week 8 - CSS Grid Dashboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-       <!-- Task 6.4: Sticky top navigation bar -->
-    <header class="top-bar">
-        <h2>My Profile</h2>
-        <span class="top-label">Week 6 Assignment</span>
-    </header>
-   <main class="profile-container">
-  <!-- Task 6.1: Box model demonstration -->
-        <section class="box-model-demo">
-            <h2>Task 6.1: CSS Box Model</h2>
-            <div class="box-model-example">
-                <span>Content</span>
-                <small>Padding + Border + Margin</small>
-            </div>
-            <p>box-sizing: border-box;</p>
-        </section>
-         <!-- Task 6.2: First profile card -->
-        <article class="profile-card card-blue">
-            <div class="profile-header">
-                <img
-                    src="profile.jpg"
-                    alt="Profile photo"
-                    class="avatar"
-                >
-                <h2>Aadesh Kumar</h2>
-                <p class="role">Web Development Student</p>
-            </div>
-             <!-- Task 6.3: Scrollable biography -->
-            <div class="bio-box">
-                <h3>About Me</h3>
-                <p>
-                    Hello! My name is Aadesh Kumar. I am a student
-                    learning HTML, CSS and JavaScript.
-                </p>
-                <p>
-                    I enjoy creating websites and learning new
-                    programming concepts. My goal is to become
-                    a skilled full-stack developer.
-                </p>
-                <p>
-                    I practise coding daily and work on small
-                    projects to improve my problem-solving skills.
-                </p>
-                <p>
-                    My hobbies include reading, learning technology,
-                    listening to music and exploring new ideas.
-                </p>
-                <p>
-                    I believe consistency and practice are the keys
-                    to becoming a good programmer.
-                </p>
-            </div>
 
-            <div class="profile-footer">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-            </div>
-        </article>
-               <!-- Task 6.2: Second colour version -->
-        <article class="profile-card card-purple">
-            <div class="profile-header">
-                <img
-                    src="profile.jpg"
-                    alt="Profile photo"
-                    class="avatar"
-                >
-                <h2>Aadesh Kumar</h2>
-                <p class="role">Creative Web Designer</p>
-            </div>
-             <div class="bio-box">
-                <h3>About Me</h3>
-                <p>
-                    Hi! I am Aadesh Kumar, a creative student
-                    interested in web design and user interfaces.
-                </p>
-                <p>
-                    I like designing clean, responsive and
-                    attractive websites using HTML and CSS.
-                </p>
-                <p>
-                    I am learning layout techniques, the CSS
-                    box model, positioning and responsive design.
-                </p>
-                <p>
-                    My aim is to create user-friendly websites
-                    and develop my frontend development skills.
-                </p>
-            </div>
+    <div class="dashboard">
 
-            <div class="profile-footer">
-                <span>Design</span>
-                <span>HTML</span>
-                <span>CSS</span>
+        <header class="header">
+            <h2>My Dashboard</h2>
+            <div class="profile">
+                <span>Welcome, Student</span>
+                <span class="avatar">S</span>
             </div>
-        </article>
-   </main>
-     <!-- Task 6.5: Fixed floating action button -->
-    <button class="floating-button"
-            type="button"
-            aria-label="Add profile">
-        +
-    </button>
+        </header>
+        <aside class="sidebar">
+            <h3>Menu</h3>
+            <nav>
+                <a href="#" class="active">🏠 Dashboard</a>
+                <a href="#">📊 Analytics</a>
+                <a href="#">📁 Projects</a>
+                <a href="#">👥 Users</a>
+                <a href="#">⚙️ Settings</a>
+            </nav>
+        </aside>
+        <main class="main">
+            <h1>Dashboard Overview</h1>
+            <p class="subtitle">
+                Welcome to your responsive CSS Grid dashboard.
+            </p>
 
-    <footer class="page-footer">
-        <p>Week 6 | Practical Lab 2 | Profile Card</p>
-    </footer>
+            
+            <section class="cards">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="icon">👥</span>
+                        <div>
+                            <h3>Total Users</h3>
+                            <p class="number">1,250</p>
+                        </div>
+                    </div>
+                    <p class="description">Registered users</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <span class="icon">📦</span>
+                        <div>
+                            <h3>Total Products</h3>
+                            <p class="number">320</p>
+                        </div>
+                    </div>
+                    <p class="description">Products available</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <span class="icon">💰</span>
+                        <div>
+                            <h3>Total Revenue</h3>
+                            <p class="number">₹45,000</p>
+                        </div>
+                    </div>
+                    <p class="description">Monthly revenue</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <span class="icon">🛒</span>
+                        <div>
+                            <h3>Total Orders</h3>
+                            <p class="number">850</p>
+                        </div>
+                    </div>
+                    <p class="description">Orders received</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <span class="icon">📈</span>
+                        <div>
+                            <h3>Growth</h3>
+                            <p class="number">18%</p>
+                        </div>
+                    </div>
+                    <p class="description">Monthly growth</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <span class="icon">⭐</span>
+                        <div>
+                            <h3>Rating</h3>
+                            <p class="number">4.8/5</p>
+                        </div>
+                    </div>
+                    <p class="description">Customer rating</p>
+                </div>
+
+            </section>
+        </main>
+        <footer class="footer">
+            <p>&copy; 2026 My Dashboard. All rights reserved.</p>
+        </footer>
+
+    </div>
 </body>
 </html>
